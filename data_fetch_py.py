@@ -13,7 +13,6 @@ from io import StringIO
 import os
 
 # === Alpha Vantage API Settings ===
-# ⚠️ Replace with your own Alpha Vantage API key
 api_key = 'YOUR_API_KEY'  # <- Replace this!
 symbol = 'SPY'
 function = 'TIME_SERIES_DAILY'
@@ -38,7 +37,7 @@ try:
     if response.status_code == 200:
         # Check if API returned valid CSV header
         if not response.text.strip().startswith(('timestamp,', 'datetime,')):
-            print("⚠️ Unexpected response format:")
+            print("Unexpected response format:")
             print(response.text[:200])
             if "Note" in response.text:
                 print("Note: You may have exceeded the API rate limit (5 calls per minute).")
@@ -62,20 +61,20 @@ try:
             df['HL2'] = (df['high'] + df['low']) / 2
             df['OHLC4'] = (df['open'] + df['high'] + df['low'] + df['close']) / 4
 
-            print(f"✅ Downloaded {len(df)} rows.")
-            print(f"📅 Date range: {df['timestamp'].min().date()} to {df['timestamp'].max().date()}")
+            print(f"Downloaded {len(df)} rows.")
+            print(f"Date range: {df['timestamp'].min().date()} to {df['timestamp'].max().date()}")
 
             # Save to CSV
             output_path = os.path.join(save_dir, f'{symbol}_Daily_Full.csv')
             df.to_csv(output_path, index=False)
-            print(f"📁 Data saved to: {output_path}")
+            print(f"Data saved to: {output_path}")
     else:
-        print(f"❌ Request failed. Status code: {response.status_code}")
+        print(f"Request failed. Status code: {response.status_code}")
         print("Response preview:", response.text[:200])
 
 except Exception as e:
-    print("❌ Exception occurred:", str(e))
+    print("Exception occurred:", str(e))
     if "Timeout" in str(e):
         print("Hint: Check your internet connection or increase the timeout.")
 
-print("\n✅ Daily data fetch completed.")
+print("\n Daily data fetch completed.")

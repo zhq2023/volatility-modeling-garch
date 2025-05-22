@@ -29,8 +29,6 @@ The data pipeline uses Python (`requests`, `pandas`) to fetch, process, and stor
 1. Go to [Alpha Vantage](https://www.alphavantage.co/) and sign up for a free API key.  
 2. Open the `data_fetch.py` script and replace the following line with your own API key.
 
-> ⚠️ Remember to replace `'YOUR_API_KEY'` with your own API key in `data_fetch.py`.  
-
 ---
 
 ## 🧠 Modeling Strategy

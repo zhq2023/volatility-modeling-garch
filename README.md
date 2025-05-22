@@ -73,20 +73,21 @@ This study compares 12 model configurations across:
 - **10-day Volatility Forecasting**  
 - **Value-at-Risk (VaR)** with skewed t-distribution  
 - **Expected Shortfall (ES)** for tail risk  
-- **Backtesting:**  
+- **Backtesting**  
 
 ---
 
 ## 📂 Repository Structure
-├── data/
-├── results/
-├── visualization/
-├── data_fetch.py/
-├── main_notebook.ipynb/
-├── requirements.txt/
-├── environment.yml/
-├── README.md/
-└── LICENSE
+
+- data/
+- results/
+- visualization/
+- data_fetch.py
+- main_notebook.ipynb
+- requirements.txt
+- environment.yml
+- README.md
+- LICENSE
 
 ---
 

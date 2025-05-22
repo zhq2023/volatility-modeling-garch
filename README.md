@@ -79,7 +79,6 @@ This study compares 12 model configurations across:
 
 ## 📂 Repository Structure
 
-- data/
 - results/
 - visualization/
 - data_fetch.py

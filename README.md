@@ -81,11 +81,11 @@ This study compares 12 model configurations across:
 ├── data/
 ├── results/
 ├── visualization/
-├── data_fetch.py
-├── main_notebook.ipynb
-├── requirements.txt
-├── environment.yml 
-├── README.md
+├── data_fetch.py/
+├── main_notebook.ipynb/
+├── requirements.txt/
+├── environment.yml/
+├── README.md/
 └── LICENSE
 
 ---
